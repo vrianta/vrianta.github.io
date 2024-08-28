@@ -1,48 +1,44 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Sample workflow for building and deploying a static site to GitHub Pages
+name: Deploy Static PHP Site to GitHub Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Install PHP and Composer
-        run: sudo apt-get install -y php-cli php-mbstring php-xml unzip
-
-      - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress
-
-      - name: Start PHP Server (Background)
-        run: php -S localhost:8000
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-
+      - name: Generate static site from PHP
+        run: |
+          mkdir -p static-site
+          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost -P static-site
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./static-site
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
