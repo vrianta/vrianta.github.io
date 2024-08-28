@@ -9,7 +9,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "test": "php -S localhost:8000 -t public/"
+        "test": "php -S localhost:443"
     },
     "config": {
         "optimize-autoloader": true
