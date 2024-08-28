@@ -1,0 +1,19 @@
+{
+    "name": "your-vendor/your-project",
+    "description": "A simple PHP project with a single file",
+    "type": "project",
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "php -S localhost:8000 -t public/"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
