@@ -1,0 +1,242 @@
+.primary-color {
+    color: #ffed0e;
+    background-color: #33332c;
+}
+
+.secondary-color {
+    background-color: #ffed0e;
+    color: #33332c;
+}
+.secondary-color a {
+    color: #33332c;
+    text-decoration: none;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(12, 8.33vw);
+    grid-template-rows: repeat(12, minmax(8.33vh, auto));
+}
+
+.grid-child-container {
+    display: grid;
+
+    grid-template-columns: var(repeat(12, 8.33%));
+    grid-template-rows: repeat(12, minmax(8.33%, auto));
+
+
+    gap:10px;
+}
+
+.grid-item {
+    grid-row-start: var(--row-start);
+    grid-row-end: var(--row-end);
+
+    grid-column-start: var(--col-start);
+    grid-column-end: var(--col-end);
+
+    grid-auto-rows: auto;
+
+}
+
+
+/* Define column start and end points using custom properties */
+
+/* Column Span 1 */
+.from-col1 {
+    --col-start: 1;
+}
+.to-col1 {
+    --col-end: 2;
+}
+/* Column Span 2 */
+.from-col2 {
+    --col-start: 2;
+}
+.to-col2 {
+    --col-end: 3;
+}
+/* Column Span 3 */
+.from-col3 {
+    --col-start: 3;
+}
+.to-col3 {
+    --col-end: 4;
+}
+/* Column Span 4 */
+.from-col4 {
+    --col-start: 4;
+}
+.to-col4 {
+    --col-end: 5;
+}
+/* Column Span 5 */
+.from-col5 {
+    --col-start: 5;
+}
+.to-col5 {
+    --col-end: 6;
+}
+/* Column Span 6 */
+.from-col6 {
+    --col-start: 6;
+}
+.to-col6 {
+    --col-end: 7;
+}
+/* Column Span 7 */
+.from-col7 {
+    --col-start: 7;
+}
+.to-col7 {
+    --col-end: 8;
+}
+/* Column Span 8 */
+.from-col8 {
+    --col-start: 8;
+}
+.to-col8 {
+    --col-end: 9;
+}
+/* Column Span 9 */
+.from-col9 {
+    --col-start: 9;
+}
+.to-col9 {
+    --col-end: 10;
+}
+/* Column Span 10 */
+.from-col10 {
+    --col-start: 10;
+}
+.to-col10 {
+    --col-end: 11;
+}
+/* Column Span 11 */
+.from-col11 {
+    --col-start: 11;
+}
+.to-col11 {
+    --col-end: 12;
+}
+/* Column Span 12 */
+.from-col12 {
+    --col-start: 12;
+}
+.to-col12 {
+    --col-end: 13;
+}
+
+/* Define row start and end points using custom properties */
+
+/* Row Span 1 */
+.from-row1 {
+    --row-start: 1;
+}
+.to-row1 {
+    --row-end: 2;
+}
+
+/* Row Span 2 */
+.from-row2 {
+    --row-start: 2;
+}
+.to-row2 {
+    --row-end: 3;
+}
+
+/* Row Span 3 */
+.from-row3 {
+    --row-start: 3;
+}
+.to-row3 {
+    --row-end: 4;
+}
+
+/* Row Span 4 */
+.from-row4 {
+    --row-start: 4;
+}
+.to-row4 {
+    --row-end: 5;
+}
+
+/* Row Span 5 */
+.from-row5 {
+    --row-start: 5;
+}
+.to-row5 {
+    --row-end: 6;
+}
+
+/* Row Span 6 */
+.from-row6 {
+    --row-start: 6;
+}
+.to-row6 {
+    --row-end: 7;
+}
+
+/* Row Span 7 */
+.from-row7 {
+    --row-start: 7;
+}
+.to-row7 {
+    --row-end: 8;
+}
+
+/* Row Span 8 */
+.from-row8 {
+    --row-start: 8;
+}
+.to-row8 {
+    --row-end: 9;
+}
+
+/* Row Span 9 */
+.from-row9 {
+    --row-start: 9;
+}
+.to-row9 {
+    --row-end: 10;
+}
+
+/* Row Span 10 */
+.from-row10 {
+    --row-start: 10;
+}
+.to-row10 {
+    --row-end: 11;
+}
+
+/* Row Span 11 */
+.from-row11 {
+    --row-start: 11;
+}
+.to-row11 {
+    --row-end: 12;
+}
+
+/* Row Span 12 */
+.from-row12 {
+    --row-start: 12;
+}
+.to-row12 {
+    --row-end: 13;
+}
+
+
+.fixed-item {
+    position: fixed;
+    /* Position relative to viewport */
+    width: 16.66vw;
+    /* Ensure the width matches the grid column size */
+    height: 100vh;
+    /* Ensure the height matches the grid row size */
+    top: 0;
+    /* Align with the top of the viewport */
+    left: 0;
+     /* Ensure it appears above other content */
+}
