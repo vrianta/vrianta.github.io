@@ -1,0 +1,24 @@
+
+@keyframes rotate-to-45deg {
+    0% {
+        transform: rotate(0);
+        opacity: 100;
+    }
+
+    100% {
+        transform: rotate(45deg);
+        opacity: 100;
+    }
+}
+
+@keyframes rotate-to-minus-45deg {
+    0% {
+        transform: rotate(0);
+        opacity: 100;
+    }
+
+    100% {
+        transform: rotate(-45deg);
+        opacity: 100;
+    }
+}

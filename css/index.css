@@ -1,29 +1,13 @@
 * {
     padding: var(--padding, 0);
     margin: var(--padding, 0);
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
 
     scroll-behavior: smooth;
 }
 
-#navigation-panel {
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Aligns items vertically */
-    justify-content: center; /* Centers the links vertically */
-    align-items: center; /* Centers the links horizontally */
-    gap: 15px; /* Adds space between the links */
-}
-
-#navigation-panel a {
-    text-decoration: none; /* Removes underline from links */
-    color: inherit; /* Inherits text color from the parent */
-    padding: 10px 20px; /* Adds padding to links */
-    border-radius: 5px; /* Rounds the corners of links */
-    width: 100%; /* Makes the links take full width */
-    text-align: center; /* Centers the text inside the links */
-}
-
-#navigation-panel a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Changes background color on hover */
+.navigation {
+    z-index: 1000;
+    background-color: rgba(0, 255, 255, 0.144);
 }
