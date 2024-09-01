@@ -33,13 +33,9 @@
 .bar {
     width: 50%;
     height: 5%;
-    background-color: #33332c;
-    /* Bar color */
-    margin: 3px 0;
-    /* Space between bars */
-    border-radius: 5px;
-    /* Rounded bars */
-    transition: all 0.3s ease;
+    background-color: #33332c; /* Bar color */
+    margin: 3px 0; /* Space between bars */
+    border-radius: 5px; /* Rounded bars */
 }
 
 .navigation-button:hover .bar {
@@ -59,10 +55,6 @@
 .navigation-button.change .bar:nth-child(3) {
     animation: rotate-to-minus-45deg 0.3s ease forwards;
     position: absolute;
-}
-
-.navigation-button.change {
-    transition: all 1s;
 }
 
 /* End While Changed */
