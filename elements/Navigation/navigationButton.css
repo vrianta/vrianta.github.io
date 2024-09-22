@@ -5,27 +5,25 @@
 .navigation-button {
     display: flex;
     height: 5vw;
-    /* Size relative to viewport width */
     width: 5vw;
-    /* Size relative to viewport width */
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    /* Shows pointer cursor on hover */
 
     position: fixed;
     bottom: 3vh;
     right: 3vw;
 
-    /* margin: 20px; */
-
     border-radius: 100%;
     box-shadow: 0 4px 6px rgb(0, 0, 0),
         0 1px 3px rgb(0, 0, 0);
-    /* Shadow for elevation */
     z-index: 1000;
+
+    --secondary-color-transparency: 20%;
+    backdrop-filter: blur(50%);
+    background-color: var(--secondary-color);
 
 }
 
@@ -72,3 +70,11 @@
 }
 
 /* End Normal state */
+
+@media (max-width: 600px) {
+
+    .navigation-button {
+        height: 10vw;
+        width: 10vw;
+    }
+}
