@@ -6,7 +6,7 @@
 .typing-animation .product-name {
     overflow: hidden; /* Ensure content is hidden */
     white-space: nowrap; /* Prevent text from wrapping */
-    animation: typing-animation 3s steps(19) forwards; /* Using steps */
+    animation: typing-animation 2.5s steps(19) forwards; /* Using steps */
     clip-path: inset(0 0 0 0); /* Start fully clipped */
 }
 
