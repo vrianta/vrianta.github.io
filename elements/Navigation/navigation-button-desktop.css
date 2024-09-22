@@ -1,0 +1,15 @@
+
+@media (min-width: 768px) {
+    .navigation-button {
+        height: 5vw;
+        /* Adjust size for larger screens */
+        width: 5vw;
+        /* Adjust size for larger screens */
+    }
+
+    .navigation-button.change .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+        /* top: 12px; */
+    }
+}

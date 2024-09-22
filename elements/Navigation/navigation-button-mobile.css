@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+    .navigation-button {
+        height: 12vw;
+        /* Adjust size for smaller screens */
+        width: 12vw;
+        /* Adjust size for smaller screens */
+    }
+}

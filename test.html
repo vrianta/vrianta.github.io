@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genie Effect</title>
+    <style>
+        .custom-square {
+    position: relative;
+    width: 100px; /* Base size of the square */
+    height: 100px;
+    background-color: #4CAF50;
+    /* Hide the overflow to manage the pseudo-elements */
+    overflow: hidden;
+}
+
+.custom-square::before,
+.custom-square::after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+}
+
+/* Top side */
+.custom-square::before {
+    top: 0;
+    left: 0;
+    width: 200%; /* Extend the top side */
+    height: 50%; /* Reduce the height */
+}
+
+/* Right side */
+.custom-square::after {
+    top: 0;
+    right: 0;
+    width: 50%; /* Reduce the width */
+    height: 200%; /* Extend the right side */
+}
+
+    </style>
+</head>
+<body>
+    <div class="custom-square"></div>
+
+    <script>
+        function toggleGenieEffect() {
+            const container = document.getElementById('genieContainer');
+            container.classList.toggle('minimized');
+        }
+    </script>
+</body>
+</html>

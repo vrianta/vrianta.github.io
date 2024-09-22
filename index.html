@@ -5,69 +5,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Simple Webpage</title>
-    <link rel="stylesheet" href="css/index.css"> <!-- External CSS File -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Navigation/navigationButton.css">
-
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="elements/index.css"> <!-- External CSS File -->
+    <link rel="stylesheet" href="elements/style.css">
+    <link rel="stylesheet" href="elements/Navigation/navigation.css">
+    <link rel="stylesheet" href="elements/unlimited-scroll/style.css">
+    <link rel="stylesheet" href="elements/TextAnimations/style.css">
+    <link rel="stylesheet" href="elements/forms/contact-us.css">
 </head>
 
 <body>
-
-    <div id="navigation-button" class="navigation-button secondary-color" onclick="navigation_popup(this)">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <div class="grid-container fixed-item">
-        <div id="navigation-panel" class="grid-item from-col1 to-col2 from-row1 to-row10 navigation hidden">
-            <a href="#home">Home</a>
-            <a href="#contact-us">contact-us</a>
-        </div>
-
-        <!-- <div class="grid-item from-col1 to-col4 from-row11 to-row12">
-            <div class="grid-container">
-                <div id="navigation-button"
-                    class="grid-item from-col2 to-col4 from-row6 to-row10 navigation custom-button"
-                    onclick="navigation_popup(this)">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                </div>
-            </div>
-        </div> -->
-
-
-    </div>
-    <div class="grid-container">
-
-
-
-        <div class="grid-item from-col1 to-col12 from-row1 to-row12 primary-color">
-            <div class="grid-container">
-                <div id="home" class="grid-item from-col1 to-col12 from-row1 to-row12 primary-color">
-                    test 1
-                    <br>
-                </div>
-
-            </div>
-            <div class="grid-container">
-                <div id="contact-us" class="grid-item from-col1 to-col12 from-row1 to-row12 .primary-color">
-                    test2
-                    <br>
-                </div>
-            </div>
+    <div class="navigation">
+        <div id="navigation-button" class="navigation-button" onclick="navigation_popup(this)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
 
         </div>
+        <div id="navigation-panel" class="navigation-panel">
+            <a onclick="focusOnSection('home')">Home</a>
+            <a onclick="focusOnSection('contact-us')">contact-us</a>
+        </div>
+    </div>
+
+    <div class="overlay">
+
+    </div>
+    <div class="contents">
+        <div id="home" class="section home">
+            <div class=" heading typing-animation">
+                <div class="product-name">
+                    <a>Vrianta Solutions.</a>
+                </div>
+                <div class="cursor">
+                    <a>|</a>
+                </div>
+            </div>
+            <div class="description product-tagline fade-up-animation">
+                <a>
+                    At Vrianta Solutions, we believe in your unique journey and limitless potential. As your trusted
+                    partner, we offer tailored solutions that drive growth. Together, we'll navigate challenges and
+                    seize opportunities, turning your vision into reality. Your success matters to us, and we’re excited
+                    to be part of your story!
+                </a>
+            </div>
+        </div>
+
+        <div id="contact-us" class="section contact-us">
+            <div class="contact-form">
+                <form onsubmit="openGmail(event)">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                    <select id="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="consulting">Business Consulting</option>
+                        <option value="web_development">Web Development</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="design">Design Services</option>
+                    </select>
+
+                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <div class="detail">
+                    <div class="icon">
+                        <div class="fa fa-map-marker fa-2x"></div>
+                    </div>
+                    <div class="text">
+                        <a>City, State</a>
+                    </div>
+
+                </div>
+                <div class="detail">
+                    <div class="icon">
+                        <div class="fa fa-phone fa-2x"></div>
+                    </div>
+                    <div class="text">
+                        <a href="tel:+919163841954" title="Give me a call">(+91) 9163841954</a>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="icon">
+                        <div class="fa fa-map-marker fa-2x"></div>
+                    </div>
+                    <div class="text">
+                        <a href="mailto:sales@vrianta.in" title="Send me an email">sales@vrianta.in</a>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="social-media">
+                    <div class="fa fa-github" aria-hidden="true"></div>
+                    <div class="fa fa-codepen" aria-hidden="true"></div>
+                    <div class="fa fa-twitter" aria-hidden="true"></div>
+                    <div class="fa fa-instagram" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <div class="tag-list">
+                <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+                    <div class="inner">
+                        <div class="tag"><span>#</span> JavaScript</div>
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                        <div class="tag"><span>#</span> Next.js</div>
+                        <div class="tag"><span>#</span> UI/UX</div>
+                        <div class="tag"><span>#</span> JavaScript</div>
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                        <div class="tag"><span>#</span> Next.js</div>
+                        <div class="tag"><span>#</span> UI/UX</div>
+                    </div>
+                </div>
+                <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
+                    <div class="inner">
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Gatsby</div>
+                        <div class="tag"><span>#</span> JavaScript</div>
+                        <div class="tag"><span>#</span> Tailwind</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Gatsby</div>
+                        <div class="tag"><span>#</span> JavaScript</div>
+                        <div class="tag"><span>#</span> Tailwind</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                    </div>
+                </div>
+                <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
+                    <div class="inner">
+                        <div class="tag"><span>#</span> animation</div>
+                        <div class="tag"><span>#</span> Tailwind</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> SVG</div>
+                        <div class="tag"><span>#</span> HTML</div>
+                        <div class="tag"><span>#</span> animation</div>
+                        <div class="tag"><span>#</span> Tailwind</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> SVG</div>
+                        <div class="tag"><span>#</span> HTML</div>
+                    </div>
+                </div>
+                <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
+                    <div class="inner">
+                        <div class="tag"><span>#</span> Gatsby</div>
+                        <div class="tag"><span>#</span> HTML</div>
+                        <div class="tag"><span>#</span> CSS</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> Next.js</div>
+                        <div class="tag"><span>#</span> Gatsby</div>
+                        <div class="tag"><span>#</span> HTML</div>
+                        <div class="tag"><span>#</span> CSS</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> Next.js</div>
+                    </div>
+                </div>
+                <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
+                    <div class="inner">
+                        <div class="tag"><span>#</span> Next.js</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                        <div class="tag"><span>#</span> Gatsby</div>
+                        <div class="tag"><span>#</span> Next.js</div>
+                        <div class="tag"><span>#</span> React</div>
+                        <div class="tag"><span>#</span> webdev</div>
+                        <div class="tag"><span>#</span> Typescript</div>
+                        <div class="tag"><span>#</span> Gatsby</div>
+                    </div>
+                </div>
+                <div class="fade"></div>
+            </div> -->
+
+
+
 
     </div>
     <footer>
-        <script src="js/navigationButton.js"></script>
-        <script>
-
-        </script>
+        <script src="elements/Navigation/navigationButton.js"></script>
+        <script src="elements/home.js"></script>
+        <script src="elements/forms/contact-us.js"></script>
+        <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
     </footer>
 </body>
 

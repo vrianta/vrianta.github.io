@@ -1,0 +1,68 @@
+.typing-animation {
+     /* Align items in the center */
+    margin-left: 2vw;
+}
+
+.typing-animation .product-name {
+    overflow: hidden; /* Ensure content is hidden */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: typing-animation 5s steps(18) forwards; /* Using steps */
+    clip-path: inset(0 0 0 0); /* Start fully clipped */
+}
+
+.typing-animation .product-name a {
+    letter-spacing: 0.5em;
+}
+
+.typing-animation .cursor {
+    animation: blink 700ms  infinite;
+}
+
+.fade-up-animation {
+    opacity: 100%;
+    animation-delay: 5s;
+    animation: 
+    animation-fade-up 2s ease-in-out forwards;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing-animation {
+    0% {
+        width: 0;
+        /* clip-path: inset(0 100% 0 0); Start fully clipped */
+    }
+    100% {
+        width: 100%;
+        /* clip-path: inset(0 0 0 0); Fully reveal */
+    }
+}
+
+@keyframes animation-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    .typing-animation {
+        /* Align items in the center */
+       margin-left: 5vw;
+   }
+}

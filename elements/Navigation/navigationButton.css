@@ -1,0 +1,74 @@
+@import url("navigation-button-mobile.css");
+@import url("navigation-button-desktop.css");
+@import url("navigation-button-keyframe.css");
+
+.navigation-button {
+    display: flex;
+    height: 5vw;
+    /* Size relative to viewport width */
+    width: 5vw;
+    /* Size relative to viewport width */
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* Shows pointer cursor on hover */
+
+    position: fixed;
+    bottom: 3vh;
+    right: 3vw;
+
+    /* margin: 20px; */
+
+    border-radius: 100%;
+    box-shadow: 0 4px 6px rgb(0, 0, 0),
+        0 1px 3px rgb(0, 0, 0);
+    /* Shadow for elevation */
+    z-index: 1000;
+
+}
+
+.bar {
+    width: 50%;
+    height: 5%;
+    background-color: var(--secondary-color);
+    /* Bar color */
+    margin: 3px 0;
+    /* Space between bars */
+    border-radius: 5px;
+    /* Rounded bars */
+}
+
+.navigation-button:hover .bar {
+    background-color: var(--secondary-hover);
+}
+
+/* While changed */
+.navigation-button.change .bar:nth-child(1) {
+    animation: rotate-to-45deg 0.3s ease forwards;
+    position: absolute;
+}
+
+.navigation-button.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navigation-button.change .bar:nth-child(3) {
+    animation: rotate-to-minus-45deg 0.3s ease forwards;
+    position: absolute;
+}
+
+.navigation-button.change {
+    transition: all 0.3s;
+}
+
+/* End While Changed */
+
+/* Normal State */
+.navigation-button .bar {
+    transform: rotate(0);
+    opacity: 100;
+}
+
+/* End Normal state */

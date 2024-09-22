@@ -1,0 +1,121 @@
+* {
+    padding: var(--padding, 0);
+    margin: var(--padding, 0);
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+
+    scroll-behavior: smooth;
+
+    font-family: 'Poppins', sans-serif;
+    /* Add a modern, stylish font */
+
+    --primary-color-transparency: 1;
+    --secondary-color-transparency: 1;
+    --background-color-transparency: 1;
+
+    --primary-color: rgb(62, 39, 35, var(--primary-color-transparency));
+    --secondary-color: rgb(214, 203, 199, var(--secondary-color-transparency));
+    --background-color: rgb(245, 245, 245, var(--background-color-transparency));
+
+    --primary-hover: rgb(93, 64, 55);
+    --secondary-hover: rgb(239, 235, 233);
+
+    --form-background: rgb(245, 245, 245);
+    --input-background: rgb(255, 255, 255, var(--background-color-transparency));
+}
+
+
+body {
+    background-image: url('../media/Background.gif');
+    /* Replace with the actual path to your image */
+    background-size: cover;
+    /* Covers the entire background */
+    background-repeat: no-repeat;
+    /* No repetition of the image */
+    background-position: center;
+    /* Centers the image */
+    background-attachment: fixed;
+    /* Keeps the background fixed while scrolling */
+    height: 100vh;
+    /* Ensures the body takes the full viewport height */
+    margin: 0;
+    /* Removes default margin */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(62, 39, 35, 1) 0%, rgba(62, 39, 35, 0.9) 10%, rgba(62, 39, 35, 0.3) 80%);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
+    z-index: 1;
+    /* Make sure it’s on top of the background */
+}
+
+.contents {
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.contents a {
+    /* margin-left: 2vw; */
+    color: var(--secondary-color);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* .home {
+    width: fit-content;
+    min-height: fit-content;
+} */
+
+.heading {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+}
+
+.description {
+    margin-left: 2vw;
+    margin-top: 1vw;
+    width: 50vw;
+}
+
+.description a {
+    letter-spacing: 0.1em;
+    font-size: 1vw;
+}
+
+@media (max-width: 600px) {
+
+    .heading {
+        display: flex;
+        align-items: center;
+        font-size: 4vw;
+    }
+
+    .description a {
+        letter-spacing: 0.1em;
+        font-size: 2.5vw;
+    }
+
+    .description {
+        margin-left: 5vw;
+        margin-top: 2vw;
+        width: 50vw;
+    }
+}

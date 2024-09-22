@@ -1,0 +1,84 @@
+.navigation-panel {
+    display: none;
+    height: 5vw;
+    width: 0;
+    cursor: pointer;
+    position: fixed;
+    bottom: 3vh;
+    left: 2vw;
+    padding-left: 1vw;
+
+    border-radius: 0% 90% 90% 0%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: var(--secondary-color);
+    
+    z-index: 1000;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.navigation-panel.active {
+    display: flex; /* Show panel when visible class is added */
+    animation-direction: normal;
+    animation: appearFromLeft 0.3s linear;
+    width: 87vw;
+    opacity: 95%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.219), 0 1px 3px rgba(0, 0, 0, 0.205);
+
+    /* flex-direction: row; */
+}
+
+.navigation-panel.inactive {
+    display: flex; /* Show panel when visible class is added */
+    width: 87vw;
+    opacity: 0;
+
+    animation-direction: normal;
+    animation: disappearToLeft 0.3s linear;
+    /* flex-direction: row; */
+}
+
+.navigation-panel a {
+    margin: 10px;
+    font-size: 1vw; /* This should change based on viewport width */
+    
+    font-weight: 600; /* Bold the text for more prominence */
+    color: var(--primary-color); /* Darker color for better contrast */
+    text-decoration: none; /* Remove underline */
+    letter-spacing: 1px; /* Space out the letters for elegance */
+    text-transform: uppercase; /* Make the text uppercase for boldness */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navigation-panel a:hover {
+    color: var(--primary-hover); /* Change text color on hover */
+    transform: translateY(-2px);
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+@keyframes appearFromLeft {
+    0% {
+        display: none;
+        width: 0; /* Optional, if you want to start with no width */
+        opacity: 0;
+    }
+    1% {
+        display: flex;
+    }
+    100% {
+        width: 87vw; /* Full width */
+        opacity: 100%;
+    }
+}
+
+@keyframes disappearToLeft {
+    0% {
+        width: 87vw; /* Full width */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        width: 0; /* Collapse width */
+        opacity: 0; /* Fade out */
+    }
+}
