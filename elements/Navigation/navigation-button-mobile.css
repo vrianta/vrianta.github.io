@@ -1,8 +1,70 @@
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .navigation-button {
-        height: 12vw;
-        /* Adjust size for smaller screens */
-        width: 12vw;
-        /* Adjust size for smaller screens */
+        display: flex;
+        height: 10vw;
+        width: 10vw;
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        position: fixed;
+        bottom: 3vh;
+        right: 3vw;
+    
+        border-radius: 100%;
+        box-shadow: 0 4px 6px rgb(0, 0, 0),
+            0 1px 3px rgb(0, 0, 0);
+        z-index: 1000;
+    
+        --secondary-color-transparency: 20%;
+        backdrop-filter: blur(50%);
+        background-color: var(--secondary-color);
+    
     }
+    
+    .bar {
+        width: 50%;
+        height: 5%;
+        background-color: var(--secondary-color);
+        /* Bar color */
+        margin: 3px 0;
+        /* Space between bars */
+        border-radius: 5px;
+        /* Rounded bars */
+    }
+    
+    .navigation-button:hover .bar {
+        background-color: var(--secondary-hover);
+    }
+    
+    /* While changed */
+    .navigation-button.change .bar:nth-child(1) {
+        animation: rotate-to-45deg 0.3s ease forwards;
+        position: absolute;
+    }
+    
+    .navigation-button.change .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navigation-button.change .bar:nth-child(3) {
+        animation: rotate-to-minus-45deg 0.3s ease forwards;
+        position: absolute;
+    }
+    
+    .navigation-button.change {
+        transition: all 0.3s;
+    }
+    
+    /* End While Changed */
+    
+    /* Normal State */
+    .navigation-button .bar {
+        transform: rotate(0);
+        opacity: 100;
+    }
+
+
 }

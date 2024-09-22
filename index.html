@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="elements/unlimited-scroll/style.css">
     <link rel="stylesheet" href="elements/TextAnimations/style.css">
     <link rel="stylesheet" href="elements/forms/contact-us.css">
+    <link rel="stylesheet" href="elements/services/services.css">
 </head>
 
 <body>
@@ -23,6 +24,7 @@
         </div>
         <div id="navigation-panel" class="navigation-panel">
             <a onclick="focusOnSection('home')">Home</a>
+            <a onclick="focusOnSection('services')">Services</a>
             <a onclick="focusOnSection('contact-us')">contact-us</a>
         </div>
     </div>
@@ -49,6 +51,18 @@
                 </a>
             </div>
         </div>
+        <div id="services" class="section services">
+            <div class="service" style="--service-background-image: url('../../media/it.jpg');" style="--service-background-image: url('../../media/it.webp');"><a href="#">IT and Technology</a></div>
+            <div class="service" style="--service-background-image: url('../../media/web.jpg');"><a href="#">Web Development</a></div>
+            <div class="service" style="--service-background-image: url('../../media/app.jpg');"><a href="#">Application Development</a></div>
+            <div class="service" style="--service-background-image: url('../../media/digital-marketing.jpg');"><a href="#">Digital Marketing Consulting</a></div>
+            <div class="service" style="--service-background-image: url('../../media/cloud.png');"><a href="#">Cloud Hosting Services</a></div>
+            <div class="service" style="--service-background-image: url('../../media/training.png');"><a href="#">Training and Development</a></div>
+            <div class="service" style="--service-background-image: url('../../media/design.jpg');"><a href="#">Design Services</a></div>
+            <!-- <div class="service" style="--service-background-image: url('../../media/it.webp');"><a href="#">Content Creation Consulting</a></div> -->
+            <div class="service" style="--service-background-image: url('../../media/social-media.avif');"><a href="#">Social Media Management Services</a></div>
+            <!-- <div class="service" style="--service-background-image: url('../../media/it.webp');"><a href="#">Franchise Business Growth</a></div> -->
+        </div>
 
         <div id="contact-us" class="section contact-us">
             <div class="contact-form">
@@ -59,15 +73,21 @@
 
                     <select id="service" required>
                         <option value="">Select a Service</option>
-                        <option value="consulting">Business Consulting</option>
-                        <option value="web_development">Web Development</option>
-                        <option value="marketing">Digital Marketing</option>
-                        <option value="design">Design Services</option>
+                        <option value="it-technology">IT and Technology</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="application-development">Application Development</option>
+                        <option value="digital-marketing">Digital Marketing Consulting</option>
+                        <option value="cloud-hosting">Cloud Hosting Services</option>
+                        <option value="training-development">Training and Development</option>
+                        <option value="design-services">Design Services</option>
+                        <option value="content-creation">Content Creation Consulting</option>
+                        <option value="social-media-management">Social Media Management Services</option>
+                        <option value="franchise-business-growth">Franchise Business Growth</option>
                     </select>
 
                     <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
 
-                    <button type="submit">Send</button>
+                    <button type="submit">CONTACT US</button>
                 </form>
             </div>
 
@@ -77,7 +97,8 @@
                         <div class="fa fa-map-marker fa-2x"></div>
                     </div>
                     <div class="text">
-                        <a href="https://www.google.co.in/maps/@22.7917,88.3646" target="new" title="Locate Office Location">Kolkata, West Bengal, India</a>
+                        <a href="https://www.google.co.in/maps/@22.7917,88.3646" target="new"
+                            title="Locate Office Location">Kolkata, West Bengal, India</a>
                     </div>
 
                 </div>
@@ -109,84 +130,6 @@
         </div>
 
     </div>
-
-
-    <!-- <div class="tag-list">
-                <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
-                    <div class="inner">
-                        <div class="tag"><span>#</span> JavaScript</div>
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                        <div class="tag"><span>#</span> Next.js</div>
-                        <div class="tag"><span>#</span> UI/UX</div>
-                        <div class="tag"><span>#</span> JavaScript</div>
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                        <div class="tag"><span>#</span> Next.js</div>
-                        <div class="tag"><span>#</span> UI/UX</div>
-                    </div>
-                </div>
-                <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
-                    <div class="inner">
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Gatsby</div>
-                        <div class="tag"><span>#</span> JavaScript</div>
-                        <div class="tag"><span>#</span> Tailwind</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Gatsby</div>
-                        <div class="tag"><span>#</span> JavaScript</div>
-                        <div class="tag"><span>#</span> Tailwind</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                    </div>
-                </div>
-                <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
-                    <div class="inner">
-                        <div class="tag"><span>#</span> animation</div>
-                        <div class="tag"><span>#</span> Tailwind</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> SVG</div>
-                        <div class="tag"><span>#</span> HTML</div>
-                        <div class="tag"><span>#</span> animation</div>
-                        <div class="tag"><span>#</span> Tailwind</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> SVG</div>
-                        <div class="tag"><span>#</span> HTML</div>
-                    </div>
-                </div>
-                <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
-                    <div class="inner">
-                        <div class="tag"><span>#</span> Gatsby</div>
-                        <div class="tag"><span>#</span> HTML</div>
-                        <div class="tag"><span>#</span> CSS</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> Next.js</div>
-                        <div class="tag"><span>#</span> Gatsby</div>
-                        <div class="tag"><span>#</span> HTML</div>
-                        <div class="tag"><span>#</span> CSS</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> Next.js</div>
-                    </div>
-                </div>
-                <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
-                    <div class="inner">
-                        <div class="tag"><span>#</span> Next.js</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                        <div class="tag"><span>#</span> Gatsby</div>
-                        <div class="tag"><span>#</span> Next.js</div>
-                        <div class="tag"><span>#</span> React</div>
-                        <div class="tag"><span>#</span> webdev</div>
-                        <div class="tag"><span>#</span> Typescript</div>
-                        <div class="tag"><span>#</span> Gatsby</div>
-                    </div>
-                </div>
-                <div class="fade"></div>
-            </div> -->
-
-
-
 
     </div>
     <footer>

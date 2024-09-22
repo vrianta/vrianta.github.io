@@ -1,0 +1,86 @@
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    min-height: 40vh;
+    background-color: var(--background-color);
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    padding: 2vw;
+}
+
+.services .service {
+    height: 23.5vw;
+    width: 23.5vw;
+    display: flex;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 500ms linear;
+    --service-background-image: url(../../media/background.gif);
+    background-image: var(--service-background-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /* background-attachment: fixed; */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.services .service a{
+    z-index: 5;
+    color: var(--background-color);
+    font-size: 2vw;
+    text-align: center;
+
+    transition: font-size 500ms linear;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+}
+.services .service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms;
+    opacity: 0.9;
+    background: linear-gradient(to bottom,  rgba(62, 39, 35, 1) 0%, rgba(62, 39, 35, 9) 10%, rgba(62, 39, 35, 0.3) 80%); /* White fog effect */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 2; /* Above the background image */
+}
+
+.services .service:hover::after {
+    opacity: 1;
+    transition: all 500ms;
+    background: linear-gradient(to bottom,  rgba(62, 39, 35, 1) 0%, rgba(62, 39, 35, 0.9) 30%, rgba(62, 39, 35, 0.3) 100%); /* White fog effect */
+}
+
+.services .service:hover {
+    background-color: var(--primary-color);
+}
+.services .service:hover a {
+    transition: all 0s linear;
+    color: white;
+    font-size: 2.1vw;
+
+    transition: font-size 500ms linear;
+}
+.services a {
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services .service {
+        height: 47vw;
+        width: 47vw;
+    }    
+}
