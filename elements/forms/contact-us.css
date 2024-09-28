@@ -8,6 +8,8 @@
     /* Align vertically */
     flex-direction: row;
     /* Keep form and details side by side */
+
+    transition: all 500ms ease-in-out;
 }
 
 .contact-form a {
