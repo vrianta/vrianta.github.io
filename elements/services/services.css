@@ -3,11 +3,16 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1vw;
     min-height: 40vh;
+    --background-color-transparency: 90%;
     background-color: var(--background-color);
+    backdrop-filter: blur(3px);
     justify-content: space-around;
     align-items: center;
     justify-items: center;
     padding: 2vw;
+
+    padding-top: 3vw;
+    padding-bottom: 3vw;
 }
 
 .services .service {
@@ -32,6 +37,7 @@
 
 .services .service a{
     z-index: 5;
+    
     color: var(--background-color);
     font-size: 2vw;
     text-align: center;
@@ -49,7 +55,7 @@
     height: 100%;
     transition: all 500ms;
     opacity: 0.9;
-    background: linear-gradient(to bottom,  rgba(62, 39, 35, 1) 0%, rgba(62, 39, 35, 9) 10%, rgba(62, 39, 35, 0.3) 80%); /* White fog effect */
+    background: linear-gradient(to bottom,  rgba(62, 39, 35, 1) 0%, rgba(62, 39, 35, 0.7) 20%, rgba(62, 39, 35, 0.3) 80%); /* White fog effect */
     border-radius: 10px; /* Rounded corners */
     z-index: 2; /* Above the background image */
 }
@@ -82,5 +88,9 @@
     .services .service {
         height: 47vw;
         width: 47vw;
-    }    
+    }
+    
+    .services .service a {
+        font-size: 4vw;
+    }  
 }
