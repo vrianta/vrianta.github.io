@@ -141,6 +141,7 @@
         /* align-items: flex-end; */
         max-width: 80vw;
         display: inline-flex;
+        padding-top: 14vw;
     }
 
     .contact-us {
@@ -169,5 +170,9 @@
         width: 100%;
         font-size: 5vw;
         justify-content: flex-end;
+    }
+
+    .contact-form form input, .contact-form form textarea, .contact-form form select { 
+        font-size: 4vw;
     }
 }
