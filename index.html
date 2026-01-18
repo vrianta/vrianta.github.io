@@ -4,148 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vrianta offers innovative business solutions focused on planning, design, and growth. Discover how we help brands thrive.">
-    <meta name="keywords" content="Vrianta, business solutions, branding, digital transformation, consulting">
-    <meta property="og:title" content="Vrianta - Planning, Design, and Growth">
-<meta property="og:description" content="Explore innovative solutions with Vrianta.">
-<meta property="og:image" content="https://vrianta.in/assets/your-image.jpg">
-<meta property="og:url" content="https://vrianta.in">
-<meta name="twitter:card" content="summary_large_image">
-    
-    <title>Vrianta Solutions</title>
-    <link rel="stylesheet" href="elements/index.css"> <!-- External CSS File -->
-    <link rel="stylesheet" href="elements/style.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Explore Vrianta’s open source contributions. Discover real-world projects, tools, and community-driven software built by Vrianta Solutions.">
+    <meta name="keywords"
+        content="Vrianta, open source, github projects, software engineering, web development, javascript, cloud, digital solutions">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vrianta Open Source Contributions">
+    <meta property="og:description"
+        content="Community-driven open source projects by Vrianta Solutions.">
+    <meta property="og:image" content="https://vrianta.in/assets/open-source-cover.jpg">
+    <meta property="og:url" content="https://vrianta.in/open-source">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Vrianta | Open Source Contributions</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/open-source.css">
     <link rel="stylesheet" href="elements/Navigation/navigation.css">
-    <link rel="stylesheet" href="elements/unlimited-scroll/style.css">
-    <link rel="stylesheet" href="elements/TextAnimations/style.css">
-    <link rel="stylesheet" href="elements/forms/contact-us.css">
-    <link rel="stylesheet" href="elements/services/services.css">
 </head>
 
 <body>
+
+    <!-- NAVIGATION (Reuse Existing) -->
     <div class="navigation">
         <div id="navigation-button" class="navigation-button" onclick="navigation_popup(this)">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-
         </div>
         <div id="navigation-panel" class="navigation-panel">
-            <a onclick="focusOnSection('home')">Home</a>
-            <a onclick="focusOnSection('services')">Services</a>
-            <a onclick="focusOnSection('contact-us')">contact-us</a>
+            <a onclick="location.href='index.html'">Home</a>
+            <a onclick="location.href='index.html#services'">Services</a>
+            <a onclick="location.href='index.html#contact-us'">Contact</a>
         </div>
     </div>
 
-    <div class="overlay">
+    <!-- HERO -->
+    <section class="os-hero">
+        <h1>Open Source @ Vrianta</h1>
+        <p>
+            We build in public. Every repository represents our belief in transparency,
+            scalable engineering, and community collaboration.
+        </p>
 
-    </div>
-    <div class="contents">
-        <div id="home" class="section home">
-            <div class=" heading typing-animation">
-                <div class="product-name">
-                    <a>Vrianta Solutions.</a>
-                </div>
-                <div class="cursor">
-                    <a>|</a>
-                </div>
-            </div>
-            <div class="description product-tagline fade-up-animation">
-                <a>
-                    At Vrianta Solutions, we believe in your unique journey and limitless potential. As your trusted
-                    partner, we offer tailored solutions that drive growth. Together, we'll navigate challenges and
-                    seize opportunities, turning your vision into reality. Your success matters to us, and we’re excited
-                    to be part of your story!
-                </a>
-            </div>
+        <a href="https://github.com/vrianta" target="_blank" class="github-btn">
+            <i class="fa fa-github"></i> View GitHub
+        </a>
+    </section>
+
+    <!-- STATS -->
+    <section class="os-stats">
+        <div class="stat">
+            <span id="repoCount">0</span>
+            <p>Repositories</p>
         </div>
-        <div id="services" class="section services">
-            <div class="service" style="--service-background-image: url('../../media/it.jpg');" style="--service-background-image: url('../../media/it.webp');"><a href="#">IT and Technology</a></div>
-            <div class="service" style="--service-background-image: url('../../media/web.jpg');"><a href="#">Web Development</a></div>
-            <div class="service" style="--service-background-image: url('../../media/app.jpg');"><a href="#">Application Development</a></div>
-            <div class="service" style="--service-background-image: url('../../media/digital-marketing.jpg');"><a href="#">Digital Marketing Consulting</a></div>
-            <div class="service" style="--service-background-image: url('../../media/cloud.png');"><a href="#">Cloud Hosting Services</a></div>
-            <div class="service" style="--service-background-image: url('../../media/training.png');"><a href="#">Training and Development</a></div>
-            <div class="service" style="--service-background-image: url('../../media/design.jpg');"><a href="#">Design Services</a></div>
-            <!-- <div class="service" style="--service-background-image: url('../../media/it.webp');"><a href="#">Content Creation Consulting</a></div> -->
-            <div class="service" style="--service-background-image: url('../../media/social-media.avif');"><a href="#">Social Media Management Services</a></div>
-            <!-- <div class="service" style="--service-background-image: url('../../media/it.webp');"><a href="#">Franchise Business Growth</a></div> -->
+        <div class="stat">
+            <span id="starCount">0</span>
+            <p>Total Stars</p>
         </div>
-
-        <div id="contact-us" class="section contact-us">
-            <div class="contact-form">
-                <form onsubmit="openGmail(event)">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <input type="tel" id="phone" placeholder="Your Phone Number" required>
-
-                    <select id="service" required>
-                        <option value="">Select a Service</option>
-                        <option value="it-technology">IT and Technology</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="application-development">Application Development</option>
-                        <option value="digital-marketing">Digital Marketing Consulting</option>
-                        <option value="cloud-hosting">Cloud Hosting Services</option>
-                        <option value="training-development">Training and Development</option>
-                        <option value="design-services">Design Services</option>
-                        <option value="content-creation">Content Creation Consulting</option>
-                        <option value="social-media-management">Social Media Management Services</option>
-                        <option value="franchise-business-growth">Franchise Business Growth</option>
-                    </select>
-
-                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
-                    <button type="submit">CONTACT US</button>
-                </form>
-            </div>
-
-            <div class="contact-details">
-                <div class="detail">
-                    <div class="icon">
-                        <div class="fa fa-map-marker fa-2x"></div>
-                    </div>
-                    <div class="text">
-                        <a href="https://www.google.co.in/maps/@22.7917,88.3646" target="new"
-                            title="Locate Office Location">Kolkata, West Bengal, India</a>
-                    </div>
-
-                </div>
-                <div class="detail">
-                    <div class="icon">
-                        <div class="fa fa-phone fa-2x"></div>
-                    </div>
-                    <div class="text">
-                        <a href="tel:+919163841954" title="Give me a call">(+91) 9163841954</a>
-                    </div>
-                </div>
-                <div class="detail">
-                    <div class="icon">
-                        <div class="fa fa-map-marker fa-2x"></div>
-                    </div>
-                    <div class="text">
-                        <a href="mailto:sales@vrianta.in" title="Send me an email">sales@vrianta.in</a>
-                    </div>
-
-                </div>
-                <hr>
-                <div class="social-media">
-                    <div class="fa fa-github" aria-hidden="true"></div>
-                    <div class="fa fa-codepen" aria-hidden="true"></div>
-                    <div class="fa fa-twitter" aria-hidden="true"></div>
-                    <div class="fa fa-instagram" aria-hidden="true"></div>
-                </div>
-            </div>
+        <div class="stat">
+            <span id="forkCount">0</span>
+            <p>Total Forks</p>
         </div>
+    </section>
 
-    </div>
+    <!-- PROJECTS -->
+    <section class="os-projects">
+        <h2>Featured Open Source Projects</h2>
+        <div id="projectGrid" class="project-grid"></div>
+    </section>
 
-    </div>
-    <footer>
-        <script src="elements/Navigation/navigationButton.js"></script>
-        <script src="elements/home.js"></script>
-        <script src="elements/forms/contact-us.js"></script>
-        <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
-    </footer>
+    <!-- CTA -->
+    <section class="os-cta">
+        <h2>Let’s Build Together</h2>
+        <p>
+            Fork our projects, open issues, submit PRs — or collaborate with Vrianta on your next product.
+        </p>
+        <a href="mailto:sales@vrianta.in" class="cta-btn">Start a Collaboration</a>
+    </section>
+
+    <!-- Scripts -->
+    <script src="elements/Navigation/navigationButton.js"></script>
+    <script src="assets/js/github-projects.js"></script>
+    <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+
 </body>
-
 </html>
