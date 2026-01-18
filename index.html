@@ -1,158 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
-    <meta name="description"
-        content="Explore Vrianta’s open source contributions. Discover real-world projects, tools, and community-driven software built by Vrianta Solutions.">
-    <meta name="keywords"
-        content="Vrianta, open source, github projects, software engineering, web development, javascript, cloud, digital solutions">
+  <!-- SEO -->
+  <meta name="description" content="Vrianta builds scalable digital systems. Open-source driven, engineering-led technology solutions for modern businesses.">
+  <meta name="keywords" content="Vrianta, software company, open source, web development, cloud, consulting">
+  <meta property="og:title" content="Vrianta — Engineering Digital Systems">
+  <meta property="og:description" content="Open-source driven technology solutions.">
+  <meta property="og:image" content="https://vrianta.in/assets/cover.jpg">
+  <meta property="og:url" content="https://vrianta.in">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Vrianta Open Source Contributions">
-    <meta property="og:description"
-        content="Community-driven open source projects by Vrianta Solutions.">
-    <meta property="og:image" content="https://vrianta.in/assets/open-source-cover.jpg">
-    <meta property="og:url" content="https://vrianta.in/open-source">
-    <meta name="twitter:card" content="summary_large_image">
+  <title>Vrianta — Digital Systems, Built Right</title>
 
-    <title>Vrianta | Open Source Contributions</title>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/open-source.css">
-    <link rel="stylesheet" href="elements/Navigation/navigation.css">
-    <link rel="stylesheet" href="elements/forms/contact-us.css">
-
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
 
-    <!-- NAVIGATION (Reuse Existing) -->
-    <div class="navigation">
-        <div id="navigation-button" class="navigation-button" onclick="navigation_popup(this)">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div id="navigation-panel" class="navigation-panel">
-            <a onclick="location.href='index.html'">Home</a>
-            <a onclick="location.href='index.html#services'">Services</a>
-            <a onclick="location.href='index.html#contact-us'">Contact</a>
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">Vrianta</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#open-source">Open Source</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="os-hero">
-        <h1>Open Source @ Vrianta</h1>
-        <p>
-            We build in public. Every repository represents our belief in transparency,
-            scalable engineering, and community collaboration.
-        </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>
+        We build digital systems<br>
+        that scale with your business.
+      </h1>
+      <p>
+        Open-source driven. Engineering-led.<br>
+        Focused on clarity, performance, and long-term growth.
+      </p>
 
-        <a href="https://github.com/vrianta" target="_blank" class="github-btn">
-            <i class="fa fa-github"></i> View GitHub
-        </a>
-    </section>
-
-    <!-- STATS -->
-    <section class="os-stats">
-        <div class="stat">
-            <span id="repoCount">0</span>
-            <p>Repositories</p>
-        </div>
-        <div class="stat">
-            <span id="starCount">0</span>
-            <p>Total Stars</p>
-        </div>
-        <div class="stat">
-            <span id="forkCount">0</span>
-            <p>Total Forks</p>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="os-projects">
-        <h2>Featured Open Source Projects</h2>
-        <div id="projectGrid" class="project-grid"></div>
-    </section>
-
-    <!-- CTA -->
-    <section class="os-cta">
-        <h2>Let’s Build Together</h2>
-        <p>
-            Fork our projects, open issues, submit PRs — or collaborate with Vrianta on your next product.
-        </p>
-        <a href="mailto:sales@vrianta.in" class="cta-btn">Start a Collaboration</a>
-    </section>
-
-    <!-- Contact us-->
-    <!-- CONTACT US -->
-<section id="contact-us" class="section contact-us">
-    <div class="contact-form">
-        <form onsubmit="openGmail(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <input type="tel" id="phone" placeholder="Your Phone Number" required>
-
-            <select id="service" required>
-                <option value="">Select a Service</option>
-                <option value="open-source">Open Source Collaboration</option>
-                <option value="web-development">Web Development</option>
-                <option value="application-development">Application Development</option>
-                <option value="cloud-hosting">Cloud Hosting Services</option>
-                <option value="consulting">Consulting</option>
-            </select>
-
-            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
-            <button type="submit">CONTACT US</button>
-        </form>
+      <div class="hero-actions">
+        <a href="#open-source" class="btn primary">View Open Source</a>
+        <a href="#contact" class="btn ghost">Work With Us</a>
+      </div>
     </div>
+  </section>
 
-    <div class="contact-details">
-        <div class="detail">
-            <div class="icon"><div class="fa fa-map-marker fa-2x"></div></div>
-            <div class="text">
-                <a href="https://www.google.co.in/maps/@22.7917,88.3646" target="_blank">
-                    Kolkata, West Bengal, India
-                </a>
-            </div>
-        </div>
-
-        <div class="detail">
-            <div class="icon"><div class="fa fa-phone fa-2x"></div></div>
-            <div class="text">
-                <a href="tel:+919163841954">(+91) 9163841954</a>
-            </div>
-        </div>
-
-        <div class="detail">
-            <div class="icon"><div class="fa fa-envelope fa-2x"></div></div>
-            <div class="text">
-                <a href="mailto:sales@vrianta.in">sales@vrianta.in</a>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="social-media">
-            <a href="https://github.com/vrianta" target="_blank" class="fa fa-github"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-        </div>
+  <!-- PROOF -->
+  <section class="proof">
+    <div class="container proof-grid">
+      <div>
+        <h3>Open Source First</h3>
+        <p>We build in public and contribute back to the ecosystem.</p>
+      </div>
+      <div>
+        <h3>Engineering Focused</h3>
+        <p>Scalable architecture, clean code, long-term thinking.</p>
+      </div>
+      <div>
+        <h3>Business Aligned</h3>
+        <p>Technology that serves real business outcomes.</p>
+      </div>
     </div>
-</section>
+  </section>
 
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>What We Do</h2>
 
-    <!-- Scripts -->
-    <script src="elements/Navigation/navigationButton.js"></script>
-    <script src="assets/js/github-projects.js"></script>
-    <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
-    <script src="elements/forms/contact-us.js"></script>
+      <div class="services-grid">
+        <div class="service">
+          <h4>Web Platforms</h4>
+          <p>High-performance, maintainable web applications.</p>
+        </div>
+        <div class="service">
+          <h4>Application Development</h4>
+          <p>Reliable systems built for scale and longevity.</p>
+        </div>
+        <div class="service">
+          <h4>Cloud & Infrastructure</h4>
+          <p>Deployment, hosting, and DevOps done right.</p>
+        </div>
+        <div class="service">
+          <h4>Open Source Consulting</h4>
+          <p>Strategy, tooling, and community-driven development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- OPEN SOURCE -->
+  <section id="open-source" class="open-source">
+    <div class="container">
+      <h2>Open Source</h2>
+      <p class="section-desc">
+        Real projects. Real code. Built in public.
+      </p>
 
+      <div id="repoGrid" class="repo-grid"></div>
+
+      <a href="https://github.com/vrianta" target="_blank" class="btn ghost">
+        Visit GitHub →
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container contact-box">
+      <h2>Have a problem worth solving?</h2>
+      <p>Let’s talk.</p>
+
+      <a href="mailto:sales@vrianta.in" class="btn primary">
+        sales@vrianta.in
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> Vrianta Solutions
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
