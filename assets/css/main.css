@@ -64,7 +64,7 @@ p {
 
 /* ONE SINGLE VERTICAL RHYTHM */
 section {
-  padding-block: clamp(64px, 5vw, 120px);
+  padding-block: clamp(54px, 5vw, 102px);
 }
 
 /* =========================
