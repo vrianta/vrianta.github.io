@@ -3,9 +3,17 @@ document.getElementById("year").innerText = new Date().getFullYear();
 
 // GitHub repos
 fetch("https://api.github.com/users/vrianta/repos")
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error(`API error: ${res.status}`);
+    return res.json();
+  })
   .then(repos => {
     const grid = document.getElementById("repoGrid");
+
+    if (!Array.isArray(repos) || repos.length === 0) {
+      console.warn("No repos returned from GitHub API");
+      return;
+    }
 
     repos
       .sort((a, b) => b.stargazers_count - a.stargazers_count)
@@ -14,6 +22,7 @@ fetch("https://api.github.com/users/vrianta/repos")
         const a = document.createElement("a");
         a.href = repo.html_url;
         a.target = "_blank";
+        a.rel = "noopener noreferrer";
         a.className = "repo-link";
 
         const div = document.createElement("div");
@@ -27,4 +36,9 @@ fetch("https://api.github.com/users/vrianta/repos")
         a.appendChild(div);
         grid.appendChild(a);
       });
+  })
+  .catch(error => {
+    console.error("Failed to fetch repos:", error);
+    const grid = document.getElementById("repoGrid");
+    grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #94a3b8;">Unable to load repositories. Please visit <a href="https://github.com/vrianta" target="_blank" style="color: #38bdf8;">GitHub</a> directly.</p>';
   });
