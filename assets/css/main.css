@@ -233,11 +233,12 @@ section {
 
 .repo-link {
   display: block;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .repo-link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .repo {
@@ -245,13 +246,13 @@ section {
   border-radius: var(--radius-md);
   padding: 20px;
   height: 100%;
-  transition: all 0.2s ease;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .repo-link:hover .repo {
   border-color: var(--accent);
-  background: rgba(56, 189, 248, 0.05);
+  background: rgba(56, 189, 248, 0.08);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.12);
 }
 
 .repo h4 {
