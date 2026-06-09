@@ -231,10 +231,27 @@ section {
   margin-bottom: 40px;
 }
 
+.repo-link {
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.repo-link:hover {
+  transform: translateY(-4px);
+}
+
 .repo {
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 20px;
+  height: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.repo-link:hover .repo {
+  border-color: var(--accent);
+  background: rgba(56, 189, 248, 0.05);
 }
 
 .repo h4 {
