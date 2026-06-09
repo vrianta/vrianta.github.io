@@ -11,6 +11,11 @@ fetch("https://api.github.com/users/vrianta/repos")
       .sort((a, b) => b.stargazers_count - a.stargazers_count)
       .slice(0, 6)
       .forEach(repo => {
+        const a = document.createElement("a");
+        a.href = repo.html_url;
+        a.target = "_blank";
+        a.className = "repo-link";
+
         const div = document.createElement("div");
         div.className = "repo";
         div.innerHTML = `
@@ -18,6 +23,8 @@ fetch("https://api.github.com/users/vrianta/repos")
           <p>${repo.description || "No description provided."}</p>
           <small>⭐ ${repo.stargazers_count} • ${repo.language || "N/A"}</small>
         `;
-        grid.appendChild(div);
+        
+        a.appendChild(div);
+        grid.appendChild(a);
       });
   });
